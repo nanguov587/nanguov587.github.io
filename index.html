@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- 页面内容 -->
+  
+ <script>
+  // 异或加密函数
+  function xorEncrypt(str, key) {
+    var result = '';
+    for (var i = 0; i < str.length; i++) {
+      result += String.fromCharCode(str.charCodeAt(i) ^ key);
+    }
+    return result;
+  }
+
+  // 获取要加密的网址并进行加密处理
+  var originalUrl = 'https://nanguov587.github.io/sz/';
+  var encryptedUrl = xorEncrypt(originalUrl, 12345); // 使用固定的密钥 12345 进行加密
+
+  // 在网页中输出加密后的网址文本
+  document.write(encryptedUrl);
+</script>
+
+</body>
+</html>
